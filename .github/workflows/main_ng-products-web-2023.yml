@@ -38,8 +38,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: node-app
-          path: ./dist
+          name: products-web
+          path: ./dist/products-web
 
   deploy:
     permissions:
@@ -54,7 +54,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: node-app
+          name: products-web
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
