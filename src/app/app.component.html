@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<app-message-band [message]="message"></app-message-band>
+<app-message-band [message]="message" [showMessageBand]="messageBandService.getShowMessageBand()"></app-message-band>
 
 <div class="main-container">
     <router-outlet></router-outlet>

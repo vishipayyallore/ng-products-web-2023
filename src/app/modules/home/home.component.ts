@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProductQuickView } from '~/app/interfaces/iproduct-quickview';
 import { ISlide } from '~/app/interfaces/islide.interface';
 import { MessageBandService } from '~/app/services/message-band.service';
@@ -8,7 +8,7 @@ import { MessageBandService } from '~/app/services/message-band.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   slides: ISlide[] = [
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9' },
@@ -32,6 +32,9 @@ export class HomeComponent implements OnInit {
     this.messageBandService.setShowMessageBand(true);
   }
 
+  ngOnDestroy(): void {
+    this.messageBandService.setShowMessageBand(false);
+  }
 
 
 }
