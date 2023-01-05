@@ -8,12 +8,6 @@ import { MessageBandService } from '~/app/services/message-band.service';
 })
 export class MessageBandComponent {
 
-  // @Input()
-  // message?: string = 'No Message.';
-
-  // @Input()
-  // showMessageBand: boolean = false;
-
   constructor(public messageBandService: MessageBandService) { }
 
 }
