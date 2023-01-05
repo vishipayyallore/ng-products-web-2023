@@ -26,14 +26,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger', price: 67.33 },
   ];
 
+  message?: string = 'Messages will be displayed. Example: Offers etc.';
+
   constructor(private messageBandService: MessageBandService) { }
 
   ngOnInit(): void {
-    this.messageBandService.setShowMessageBand(true);
+    this.messageBandService.messageSubject.next(this.message);
+    this.messageBandService.showMessageSubject.next(true);
   }
 
   ngOnDestroy(): void {
-    this.messageBandService.setShowMessageBand(false);
+    this.messageBandService.showMessageSubject.next(false);
   }
 
 

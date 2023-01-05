@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, AfterContentChecked {
     , private changeDetector: ChangeDetectorRef,) { }
 
   ngOnInit(): void {
-    this.showMessageBand = this.messageBandService.getShowMessageBand();
+    // this.showMessageBand = this.messageBandService.getShowMessageBand();
   }
 
   ngAfterContentChecked(): void {

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { MessageBandService } from '~/app/services/message-band.service';
 
 @Component({
   selector: 'app-message-band',
@@ -7,12 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class MessageBandComponent {
 
-  @Input()
-  message?: string = 'No Message.';
+  // @Input()
+  // message?: string = 'No Message.';
 
-  @Input()
-  showMessageBand: boolean = false;
+  // @Input()
+  // showMessageBand: boolean = false;
 
-  constructor() { }
+  constructor(public messageBandService: MessageBandService) { }
 
 }
