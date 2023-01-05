@@ -1,6 +1,14 @@
-# ProductsWeb
+# Simple Products Store Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+
+## Screenshots
+
+![Home Page](./Documentation/Images/HomePage.PNG)
+
+![Products Page](./Documentation/Images/ProductsPage.PNG)
+
+![Page Not Found](./Documentation/Images/PageNotFound.PNG)
 
 ## Development server
 
