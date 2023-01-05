@@ -1,12 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { MessageBandService } from '~/app/services/message-band.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-message-band',
   templateUrl: './message-band.component.html',
   styleUrls: ['./message-band.component.scss']
 })
-export class MessageBandComponent implements OnInit {
+export class MessageBandComponent {
 
   @Input()
   message?: string = 'No Message.';
@@ -14,10 +13,6 @@ export class MessageBandComponent implements OnInit {
   @Input()
   showMessageBand: boolean = false;
 
-  constructor(private messageBandService: MessageBandService) { }
-
-  ngOnInit(): void {
-    this.showMessageBand = this.messageBandService.getShowMessageBand();
-  }
+  constructor() { }
 
 }
