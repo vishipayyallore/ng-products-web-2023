@@ -1,0 +1,34 @@
+mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+app-authorize-view {
+    display: flex;
+}
+
+.space {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar-single-row {
+    height: 48px;
+}
+
+// .mat-accent {
+//     background-color: #889afc !important;
+//     height: 36px;
+// }
+
+img {
+    max-height: 32px;
+    border: 2px solid #fff;
+    display: inline;
+}
+
+.logged-in {
+    display: flex;
+    align-items: center;
+}

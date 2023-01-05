@@ -1,0 +1,12 @@
+<mat-card class="example-card">
+    <img mat-card-image [ngSrc]="product.thumbnailUrl" alt="product.title" width="250" height="200">
+    <mat-card-content>
+        <p>
+            {{product.title}} | Price: {{product.price | currency}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button>View</button>&nbsp;
+        <button mat-raised-button color="primary">Buy</button>
+    </mat-card-actions>
+</mat-card>

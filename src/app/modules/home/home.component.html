@@ -1,0 +1,11 @@
+<app-image-slider [slides]="slides"></app-image-slider>
+
+<div class="featured-products">
+    <h1>Featured Products</h1>
+
+    <div class="container" *ngIf="featuredProducts && featuredProducts.length > 0">
+        <ng-container *ngFor="let product of featuredProducts">
+            <app-product-quickview [product]="product"></app-product-quickview>
+        </ng-container>
+    </div>
+</div>
