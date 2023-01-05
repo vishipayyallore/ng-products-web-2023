@@ -1,0 +1,8 @@
+<div class="all-products">
+    <div class="container" *ngIf="allProducts && allProducts.length > 0">
+        <ng-container *ngFor="let product of allProducts">
+            <app-product-quickview [product]="product"></app-product-quickview>
+        </ng-container>
+    </div>
+
+</div>
