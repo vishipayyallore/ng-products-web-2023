@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshots
 
+![PreBuilt Themes](./Documentation/Images/PreBuilt-Themes.PNG)
+
 ![Home Page](./Documentation/Images/HomePage.PNG)
 
 ![Products Page](./Documentation/Images/ProductsPage.PNG)
