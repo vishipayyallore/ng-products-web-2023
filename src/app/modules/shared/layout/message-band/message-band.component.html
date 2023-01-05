@@ -1,3 +1,3 @@
-<div class="message-band">
+<div class="message-band" *ngIf="messageBandService.message$ | async; let message">
     <h1>{{message}}</h1>
 </div>
