@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MessageBandService {
 
-  private showMessageBand: boolean = true;
+  private showMessageBand: boolean = false;
 
   constructor() { }
 
@@ -14,6 +14,7 @@ export class MessageBandService {
   }
 
   public setShowMessageBand(showMessageBand: boolean): void {
+    console.log(`showMessageBand:  ${showMessageBand}`);
     this.showMessageBand = showMessageBand;
   }
 

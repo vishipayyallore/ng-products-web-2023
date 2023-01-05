@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProductQuickView } from '~/app/interfaces/iproduct-quickview';
 import { ISlide } from '~/app/interfaces/islide.interface';
+import { MessageBandService } from '~/app/services/message-band.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   slides: ISlide[] = [
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9' },
@@ -23,9 +24,13 @@ export class HomeComponent {
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/21/thumbnail.png', title: 'Daal Masoor', price: 10.98 },
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', title: 'Elbow Macaroni', price: 47.45 },
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger', price: 67.33 },
-  ]
+  ];
 
-  constructor() { }
+  constructor(private messageBandService: MessageBandService) { }
+
+  ngOnInit(): void {
+    this.messageBandService.setShowMessageBand(true);
+  }
 
 
 

@@ -12,7 +12,7 @@ export class MessageBandComponent implements OnInit {
   message?: string = 'No Message.';
 
   @Input()
-  showMessageBand: boolean = true;
+  showMessageBand: boolean = false;
 
   constructor(private messageBandService: MessageBandService) { }
 
