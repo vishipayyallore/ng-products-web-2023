@@ -1,4 +1,4 @@
-<app-image-slider [slides]="productsService.productSlides$ | async"></app-image-slider>
+<app-image-slider [slides]="(productsService.productSlides$ | async)!"></app-image-slider>
 
 <div class="featured-products">
     <h1>Featured Products</h1>
