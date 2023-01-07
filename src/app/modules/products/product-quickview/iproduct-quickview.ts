@@ -1,4 +1,4 @@
-import { IProduct } from "../products-list/iproduct.types";
+import { IProduct } from "../iproduct";
 
 export type IProductQuickView = Omit<IProduct, "dummyData">;
 
