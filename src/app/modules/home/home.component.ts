@@ -16,6 +16,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 
+  
+
+
   constructor(private messageBandService: MessageBandService, public productsService: ProductsService) { }
 
   ngOnInit(): void {
@@ -27,5 +30,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.messageBandService.showMessageSubject.next(false);
   }
 
+  
 
 }

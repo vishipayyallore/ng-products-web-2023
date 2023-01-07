@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, TemplateRef, ViewContainerRef, DoCheck } from '@angular/core';
+import { Component, Input, ViewChild, TemplateRef, ViewContainerRef, DoCheck, OnInit } from '@angular/core';
 
 import { OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { OverlayService } from '../../services/overlay.service';
@@ -11,7 +11,7 @@ import { ThemePalette } from '@angular/material/core';
   templateUrl: './progress-spinner.component.html',
   styleUrls: ['./progress-spinner.component.scss']
 })
-export class ProgressSpinnerComponent {
+export class ProgressSpinnerComponent implements OnInit, DoCheck {
   @Input() color?: ThemePalette;
   @Input() diameter?: number = 100;
   @Input() mode!: ProgressSpinnerMode;

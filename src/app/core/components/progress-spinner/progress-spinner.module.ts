@@ -9,6 +9,9 @@ import { NgmaterialModule } from '~/app/ngmaterial/ngmaterial.module';
   declarations: [
     ProgressSpinnerComponent
   ],
+  exports: [
+    ProgressSpinnerComponent
+  ],
   imports: [
     CommonModule,
     NgmaterialModule
