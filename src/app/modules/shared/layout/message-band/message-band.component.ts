@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { MessageBandService } from '~/app/services/message-band.service';
+import { Component } from '@angular/core';
+import { MessageBandService } from './message-band.service';
+
 
 @Component({
   selector: 'app-message-band',
