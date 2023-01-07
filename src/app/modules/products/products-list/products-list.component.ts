@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IProductQuickView } from '~/app/interfaces/iproduct-quickview';
+import { IProductQuickView } from '~/app/modules/products/iproduct-quickview';
 
 @Component({
   selector: 'app-products-list',
