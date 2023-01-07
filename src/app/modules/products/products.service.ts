@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, ReplaySubject } from 'rxjs';
+import { BehaviorSubject, map, ReplaySubject } from 'rxjs';
 import { getSlidesFromProducts, IProduct } from './iproduct';
 import { getQuickViewsFromProducts } from './product-quickview/iproduct-quickview';
 
@@ -9,7 +9,7 @@ import { getQuickViewsFromProducts } from './product-quickview/iproduct-quickvie
 })
 export class ProductsService {
 
-  private products = new ReplaySubject<IProduct[]>(1);
+  private products = new BehaviorSubject<IProduct[]>([]);
   products$ = this.products.asObservable();
 
   productSlides$ = this.products.pipe(map(getSlidesFromProducts));

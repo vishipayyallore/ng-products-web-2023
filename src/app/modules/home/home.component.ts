@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProductQuickView } from '~/app/modules/products/product-quickview/iproduct-quickview';
-import { ISlide } from '~/app/interfaces/islide.interface';
 import { MessageBandService } from '../shared/layout/message-band/message-band.service';
 import { ProductsService } from '../products/products.service';
 
@@ -11,13 +10,13 @@ import { ProductsService } from '../products/products.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  slides: ISlide[] = [
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9' },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/17/thumbnail.jpg', title: 'Tree Oil 30ml' },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/21/thumbnail.png', title: 'Daal Masoor' },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', title: 'Elbow Macaroni' },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger' },
-  ];
+  // slides: ISlide[] = [
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9' },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/17/thumbnail.jpg', title: 'Tree Oil 30ml' },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/21/thumbnail.png', title: 'Daal Masoor' },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', title: 'Elbow Macaroni' },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger' },
+  // ];
 
   featuredProducts: IProductQuickView[] = [
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9', price: 10.98 },
@@ -29,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 
-  constructor(private messageBandService: MessageBandService, private productsService: ProductsService) { }
+  constructor(private messageBandService: MessageBandService, public productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.messageBandService.messageSubject.next(this.message);
