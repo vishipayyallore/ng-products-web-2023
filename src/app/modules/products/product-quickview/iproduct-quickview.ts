@@ -2,6 +2,13 @@ import { IProduct } from "../products-list/iproduct.types";
 
 export type IProductQuickView = Omit<IProduct, "dummyData">;
 
+export function getQuickViewFromProducts(products: IProduct[]): IProductQuickView[] {
+    return products.map((product: IProduct) => {
+        const { dummyData, ...quickView } = product;
+        return quickView;
+    });
+}
+
 // export interface IProductQuickView {
 //     title: string;
 

@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProductQuickView } from '~/app/modules/products/product-quickview/iproduct-quickview';
 import { ISlide } from '~/app/interfaces/islide.interface';
 import { MessageBandService } from '../shared/layout/message-band/message-band.service';
+import { ProductsService } from '../products/products.service';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 
-  constructor(private messageBandService: MessageBandService) { }
+  constructor(private messageBandService: MessageBandService, private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.messageBandService.messageSubject.next(this.message);
