@@ -1,9 +1,11 @@
-<app-image-slider [slides]="(productsService.productSlides$ | async)!"></app-image-slider>
+<ng-container *ngIf="productsService.productSlides$ | async; let productSlides">
+    <app-image-slider [slides]="productSlides"></app-image-slider>
+</ng-container>
 
 <div class="featured-products">
     <h1>Featured Products</h1>
 
-    <div class="container" *ngIf="featuredProducts && featuredProducts.length > 0">
+    <div class="container" *ngIf="(productsService.productQuickViews$ | async) as featuredProducts">
         <ng-container *ngFor="let product of featuredProducts">
             <app-product-quickview [product]="product"></app-product-quickview>
         </ng-container>

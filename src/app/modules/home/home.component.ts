@@ -18,13 +18,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger' },
   // ];
 
-  featuredProducts: IProductQuickView[] = [
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9', price: 10.98 },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/17/thumbnail.jpg', title: 'Tree Oil 30ml', price: 20.23 },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/21/thumbnail.png', title: 'Daal Masoor', price: 10.98 },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', title: 'Elbow Macaroni', price: 47.45 },
-    { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger', price: 67.33 },
-  ];
+  // featuredProducts: IProductQuickView[] = [
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg', title: 'iPhone 9', price: 10.98 },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/17/thumbnail.jpg', title: 'Tree Oil 30ml', price: 20.23 },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/21/thumbnail.png', title: 'Daal Masoor', price: 10.98 },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', title: 'Elbow Macaroni', price: 47.45 },
+  //   { thumbnailUrl: 'https://i.dummyjson.com/data/products/26/thumbnail.jpg', title: 'Plant Hanger', price: 67.33 },
+  // ];
 
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 

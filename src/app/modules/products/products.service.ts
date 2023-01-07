@@ -18,10 +18,13 @@ export class ProductsService {
   constructor(private httpClient: HttpClient) { }
 
   getProducts(): void {
+
+    console.log('ProductsService.getProducts()');
     // Get products from API and put into this.products
     this.httpClient.get<IProduct[]>('https://dummyjson.com/products?limit=10')
       .subscribe({
         next: products => {
+          console.log('ProductsService.getProducts() :: Next()');
           this.products.next(products);
         },
         error: err => {
