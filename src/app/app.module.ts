@@ -11,6 +11,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { ProductsListComponent } from './modules/products/products-list/products-list.component';
 import { NotFoundComponent } from './core/errors/not-found/not-found.component';
 import { ProductQuickviewComponent } from './modules/products/product-quickview/product-quickview.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductQuickviewComponent } from './modules/products/product-quickview/
     BrowserModule,
     AppRoutingModule,
     NgmaterialModule,
+    HttpClientModule,
     SharedModule,
     BrowserAnimationsModule,
     NgOptimizedImage
