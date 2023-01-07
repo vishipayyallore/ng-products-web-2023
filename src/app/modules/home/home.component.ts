@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IProductQuickView } from '~/app/modules/products/iproduct-quickview';
+import { IProductQuickView } from '~/app/modules/products/product-quickview/iproduct-quickview';
 import { ISlide } from '~/app/interfaces/islide.interface';
 import { MessageBandService } from '~/app/services/message-band.service';
 

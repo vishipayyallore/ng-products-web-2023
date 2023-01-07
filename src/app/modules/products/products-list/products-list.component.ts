@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IProductQuickView } from '~/app/modules/products/iproduct-quickview';
+import { IProductQuickView } from '~/app/modules/products/product-quickview/iproduct-quickview';
 
 @Component({
   selector: 'app-products-list',
@@ -20,5 +20,5 @@ export class ProductsListComponent {
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/43/thumbnail.jpg', title: 'Elbow Macaroni', price: 47.45 },
     { thumbnailUrl: 'https://i.dummyjson.com/data/products/46/thumbnail.jpg', title: 'Plant Hanger', price: 67.33 },
   ]
-  
+
 }
