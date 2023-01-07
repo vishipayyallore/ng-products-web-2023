@@ -15,7 +15,7 @@ export class ProgressSpinnerComponent implements OnInit, DoCheck {
   @Input() color?: ThemePalette;
   @Input() diameter?: number = 100;
   @Input() mode!: ProgressSpinnerMode;
-  @Input() strokeWidth?: number;
+  @Input() strokeWidth: number = 20;
   @Input() value?: number;
   @Input() backdropEnabled = true;
   @Input() positionGloballyCenter = true;

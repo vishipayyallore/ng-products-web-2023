@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { MessageBandService } from './modules/shared/layout/message-band/message-band.service';
@@ -8,7 +8,7 @@ import { MessageBandService } from './modules/shared/layout/message-band/message
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   title = 'Products Store';
 
@@ -21,17 +21,26 @@ export class AppComponent implements OnInit {
   displayProgressSpinner = false;
   spinnerWithoutBackdrop = false;
 
-  constructor(public messageBandService: MessageBandService) { }
+  constructor(public messageBandService: MessageBandService, private cd: ChangeDetectorRef) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.showProgressSpinner();
   }
 
+  ngOnInit(): void {
+    // this.showProgressSpinner();
+  }
+
   // Display progress spinner for 3 secs on click of button
-  showProgressSpinner = () => {
+  showProgressSpinner() {
     this.displayProgressSpinner = true;
+    this.cd.detectChanges();
+
+    const self = this;
+
     setTimeout(() => {
-      this.displayProgressSpinner = false;
+      self.displayProgressSpinner = false;
+      self.cd.detectChanges();
     }, 3000);
   };
 
