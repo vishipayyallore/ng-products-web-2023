@@ -53,6 +53,9 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
   }
 
   getCurrentSlideUrl() {
+
+    console.log(this.slides);
+
     return `url('${this.slides[this.currentIndex].thumbnailUrl}')`;
   }
 

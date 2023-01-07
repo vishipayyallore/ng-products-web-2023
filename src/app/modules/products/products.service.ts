@@ -23,9 +23,9 @@ export class ProductsService {
     // Get products from API and put into this.products
     this.httpClient.get<IProduct[]>('https://dummyjson.com/products?limit=10')
       .subscribe({
-        next: products => {
+        next: (payload: any) => {
           console.log('ProductsService.getProducts() :: Next()');
-          this.products.next(products);
+          this.products.next(payload.products);
         },
         error: err => {
           console.warn(err);

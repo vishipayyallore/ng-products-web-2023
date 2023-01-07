@@ -1,20 +1,34 @@
 import { ISlide } from "~/app/interfaces/islide.interface";
 
 export interface IProduct {
-    title: string;
+    brand: string;
+
+    category: string;
+
+    description: string;
+
+    discountPercentage: number;
+
+    id: number;
+
+    images: string[];
 
     price: number;
 
-    thumbnailUrl: string;
+    rating: number;
 
-    dummyData: true;
+    stock: number;
+
+    thumbnail: string;
+
+    title: string;
 }
 
 export function getSlidesFromProducts(products: IProduct[]): ISlide[] {
-    return products.map((product: IProduct) => {
+    return products.map((product: any) => {
         return {
             title: product.title,
-            thumbnailUrl: product.thumbnailUrl,
+            thumbnailUrl: product.thumbnail,
         };
     });
 }

@@ -1,20 +1,23 @@
 import { IProduct } from "../iproduct";
 
-export type IProductQuickView = Omit<IProduct, "dummyData">;
+export interface IProductQuickView {
+    title: string;
+
+    price: number;
+
+    thumbnailUrl: string;
+}
+
 
 export function getQuickViewsFromProducts(products: IProduct[]): IProductQuickView[] {
-    return products.map((product: IProduct) => {
-        const { dummyData, ...quickView } = product;
-        return quickView;
+    return products.map((product: any) => {
+        return {
+            title: product.title,
+            price: product.price,
+            thumbnailUrl: product.thumbnail,
+        };
     });
 }
 
-// export interface IProductQuickView {
-//     title: string;
-
-//     price: number;
-
-//     thumbnailUrl: string;
-// }
-
 // type IProductQuickView = Omit<IProduct, "name" | "age">;
+// export type IProductQuickView = Omit<IProduct, "dummyData">;

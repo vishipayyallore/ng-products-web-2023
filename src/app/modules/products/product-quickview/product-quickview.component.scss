@@ -13,3 +13,9 @@ img {
     height: 200px;
     width: 250px;
 }
+
+.price.title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
