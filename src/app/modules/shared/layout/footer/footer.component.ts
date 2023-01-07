@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VersionService } from '~/app/services/version.service';
+import { VersionService } from '~core/services/version.service';
 
 @Component({
   selector: 'app-footer',

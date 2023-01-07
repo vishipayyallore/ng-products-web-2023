@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProductQuickView } from '~/app/modules/products/product-quickview/iproduct-quickview';
 import { ISlide } from '~/app/interfaces/islide.interface';
-import { MessageBandService } from '~/app/services/message-band.service';
+import { MessageBandService } from '../shared/layout/message-band/message-band.service';
 
 @Component({
   selector: 'app-home',

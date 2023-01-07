@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, switchMap, map } from 'rxjs';
-import { INITIAL_MESSAGE_STATE, DEFAULT_MESSAGE, EMPTY_MESSAGE } from '../core/constants/message.band';
+import { INITIAL_MESSAGE_STATE, DEFAULT_MESSAGE, EMPTY_MESSAGE } from '~core/constants/message.band';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageBandService } from './services/message-band.service';
+import { MessageBandService } from './modules/shared/layout/message-band/message-band.service';
 
 @Component({
   selector: 'app-root',
