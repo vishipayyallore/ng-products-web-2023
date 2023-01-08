@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MessageBandService } from '../shared/layout/message-band/message-band.service';
+import { map } from 'rxjs';
 import { ProductsService } from '../products/products.service';
-import { map, take } from 'rxjs';
+import { MessageBandService } from '../shared/layout/message-band/message-band.service';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +16,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 
-  
-
-
   constructor(private messageBandService: MessageBandService, public productsService: ProductsService) { }
 
   ngOnInit(): void {
@@ -29,7 +26,5 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.messageBandService.showMessageSubject.next(false);
   }
-
-  
 
 }
