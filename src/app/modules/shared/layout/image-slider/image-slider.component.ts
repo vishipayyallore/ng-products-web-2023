@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { ISlide } from '~/app/interfaces/islide.interface';
+import { ISlide } from '~/app/interfaces/islide';
 
 @Component({
   selector: 'app-image-slider',
