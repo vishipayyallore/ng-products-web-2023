@@ -7,26 +7,24 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { NgmaterialModule } from './ngmaterial/ngmaterial.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './modules/home/home.component';
-import { ProductsListComponent } from './modules/products/products-list/products-list.component';
 import { NotFoundComponent } from './core/errors/not-found/not-found.component';
-import { ProductQuickviewComponent } from './modules/products/product-quickview/product-quickview.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProgressSpinnerModule } from './core/components/progress-spinner/progress-spinner.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProductsListComponent,
     NotFoundComponent,
-    ProductQuickviewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgmaterialModule,
+    HttpClientModule,
     SharedModule,
     BrowserAnimationsModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
