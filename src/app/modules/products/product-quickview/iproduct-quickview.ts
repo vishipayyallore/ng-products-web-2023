@@ -8,7 +8,6 @@ export interface IProductQuickView {
     thumbnailUrl: string;
 }
 
-
 export function getQuickViewsFromProducts(products: IProduct[]): IProductQuickView[] {
     return products.map((product: any) => {
         return {

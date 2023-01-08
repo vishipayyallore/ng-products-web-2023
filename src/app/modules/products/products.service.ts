@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, ReplaySubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 import { getSlidesFromProducts, IProduct } from './iproduct';
 import { getQuickViewsFromProducts } from './product-quickview/iproduct-quickview';
 
