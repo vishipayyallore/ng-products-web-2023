@@ -19,7 +19,6 @@ import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import { ProgressSpinnerModule } from '../core/components/progress-spinner/progress-spinner.module';
 
 @NgModule({
   declarations: [],

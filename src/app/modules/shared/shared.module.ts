@@ -17,8 +17,6 @@ const components = [
 @NgModule({
   declarations: [
     ...components,
-    ImageSliderComponent,
-    MessageBandComponent
   ],
   exports: [
     ...components
