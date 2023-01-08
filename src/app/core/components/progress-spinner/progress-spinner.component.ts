@@ -5,7 +5,6 @@ import { OverlayService } from '../../services/overlay.service';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ThemePalette } from '@angular/material/core';
 
-
 @Component({
   selector: 'app-progress-spinner',
   templateUrl: './progress-spinner.component.html',
@@ -33,9 +32,11 @@ export class ProgressSpinnerComponent implements OnInit, DoCheck {
     this.progressSpinnerOverlayConfig = {
       hasBackdrop: this.backdropEnabled
     };
+
     if (this.positionGloballyCenter) {
       this.progressSpinnerOverlayConfig['positionStrategy'] = this.overlayService.positionGloballyCenter();
     }
+
     // Create Overlay for progress spinner
     this.overlayRef = this.overlayService.createOverlay(this.progressSpinnerOverlayConfig);
   }
