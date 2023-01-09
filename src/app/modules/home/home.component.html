@@ -1,4 +1,4 @@
-<ng-container *ngIf="productsService.productSlides$ | async; let productSlides">
+<ng-container *ngIf="productSlides$ | async; let productSlides">
     <app-image-slider [slides]="productSlides"></app-image-slider>
 </ng-container>
 

@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     map(quickViews => quickViews.slice(0, 5))
   );
 
+  productSlides$ = this.productsService.productSlides$.pipe(
+    map(productSlides => productSlides.slice(0, 5))
+  );
+
   message?: string = 'Messages will be displayed. Example: Offers etc.';
 
   constructor(private messageBandService: MessageBandService, public productsService: ProductsService) { }
