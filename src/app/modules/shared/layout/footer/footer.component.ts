@@ -16,6 +16,4 @@ export class FooterComponent implements OnInit {
     this.version = this.versionService.getVersion();
   }
 
-
-
 }

@@ -24,7 +24,6 @@ const components = [
 export class ProductsModule {
 
   constructor(private productsService: ProductsService) {
-
     console.log('ProductsModule constructor');
     this.productsService.getProducts();
   }

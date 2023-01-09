@@ -1,4 +1,4 @@
-import { ISlide } from "~/app/interfaces/islide.interface";
+import { ISlide } from "~/app/interfaces/islide";
 
 export interface IProduct {
     brand: string;

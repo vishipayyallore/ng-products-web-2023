@@ -12,9 +12,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   title = 'Products Store';
 
-  message?: string = 'Messages will be displayed. Example: Offers etc.';
-  showMessageBand: boolean = false;
-
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 50;
@@ -28,7 +25,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    // this.showProgressSpinner();
   }
 
   // Display progress spinner for 3 secs on click of button
