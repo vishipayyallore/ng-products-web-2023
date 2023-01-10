@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { map } from 'rxjs';
 import { ProductsService } from '../products/products.service';
 import { MessageBandService } from '../shared/layout/message-band/message-band.service';
@@ -14,7 +16,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     map(quickViews => quickViews.slice(0, 5))
   );
 
+  productSlides$ = this.productsService.productSlides$.pipe(
+    map(productSlides => productSlides.slice(0, 5))
+  );
+
   message?: string = 'Messages will be displayed. Example: Offers etc.';
+
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 50;
+  displayProgressSpinner = false;
+  spinnerWithoutBackdrop = false;
 
   constructor(private messageBandService: MessageBandService, public productsService: ProductsService) { }
 
