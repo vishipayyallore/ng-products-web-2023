@@ -2,8 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NgmaterialModule } from '~/app/ngmaterial/ngmaterial.module';
+import { SpinnerStructuralComponent } from './spinner/spinner-structural/spinner-structural.component';
+import { SpinnerOverlayComponent } from './spinner/spinner-overlay/spinner-overlay.component';
 
-const components: any[] = [
+const components = [
+  SpinnerOverlayComponent,
+  SpinnerStructuralComponent
 ];
 
 @NgModule({
@@ -14,4 +18,4 @@ const components: any[] = [
     NgmaterialModule
   ]
 })
-export class ProgressSpinnerModule { }
+export class CoreComponentsModule { }

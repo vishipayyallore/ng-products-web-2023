@@ -9,7 +9,7 @@ import { NgmaterialModule } from './ngmaterial/ngmaterial.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './core/errors/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProgressSpinnerModule } from './core/components/core-components.module';
+import { CoreComponentsModule } from './core/components/core-components.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ProgressSpinnerModule } from './core/components/core-components.module'
     SharedModule,
     BrowserAnimationsModule,
     NgOptimizedImage,
-    ProgressSpinnerModule
+    CoreComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
