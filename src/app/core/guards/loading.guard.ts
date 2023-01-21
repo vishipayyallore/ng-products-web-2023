@@ -1,24 +1,35 @@
 import { Injectable } from '@angular/core';
 import { CanMatch, Route, UrlSegment, UrlTree } from '@angular/router';
-import { delay, finalize, Observable, of } from 'rxjs';
+import { delay, finalize, first, firstValueFrom, Observable, of } from 'rxjs';
 
 import { AppService } from '~/app/app.service';
+import { ProductsService } from '~/app/modules/products/products.service';
+import { ILoadingGuard } from './ILoadingGuard';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoadingGuard implements CanMatch {
 
-  constructor(private appService: AppService) { }
+  private productsService!: ILoadingGuard;
 
-  canMatch(_route: Route, _segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    this.appService.spinner.next(true);
+  constructor(private appService: AppService, productsService: ProductsService) {
+    this.productsService = productsService;
+  }
 
-    const self = this;
-    return of(true).pipe(
-      delay(5000),
-      finalize(() => self.appService.spinner.next(false))
-    );
+  async canMatch(_route: Route, _segments: UrlSegment[]) {
+
+    if (await firstValueFrom(this.productsService.isLoading$)) {
+      this.appService.spinner.next(true);
+
+      await this.productsService.isLoading$.pipe(first((isLoading) => {
+        return isLoading;
+      }));
+
+      this.appService.spinner.next(false);
+    }
+
+    return true;
   }
 
 }
