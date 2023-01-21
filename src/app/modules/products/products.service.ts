@@ -31,7 +31,6 @@ export class ProductsService implements ILoadingGuard {
       )
       .subscribe({
         next: (payload: any) => {
-
           this.products.next(payload.products);
         },
         error: err => {
