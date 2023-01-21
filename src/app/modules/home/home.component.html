@@ -1,5 +1,5 @@
-<ng-container *ngIf="productSlides$ | async; let productSlides;">
-    <app-image-slider [slides]="productSlides"></app-image-slider>
+<ng-container *ngIf="{ data: productSlides$ | async } as productSlides">
+    <app-image-slider *appSpinner="!productSlides.data" [slides]="productSlides.data!"></app-image-slider>
 </ng-container>
 
 <div class="featured-products">

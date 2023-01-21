@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   );
 
   productSlides$ = this.productsService.productSlides$.pipe(
-    delay(2000),
+    delay(1000),
     map(productSlides => productSlides.slice(0, 5))
   );
 
