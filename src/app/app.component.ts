@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AppService } from './app.service';
 import { MessageBandService } from './modules/shared/layout/message-band/message-band.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'Products Store';
 
-  constructor(public messageBandService: MessageBandService, private cd: ChangeDetectorRef) { }
+  constructor(public messageBandService: MessageBandService, private cd: ChangeDetectorRef, public appService: AppService) { }
 
   ngOnInit(): void {
   }

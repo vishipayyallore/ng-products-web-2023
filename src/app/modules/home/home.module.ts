@@ -7,7 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { CoreComponentsModule } from '~/app/core/components/core-components.module';
 
 const components = [
-  HomeComponent
+  HomeComponent,
 ];
 
 @NgModule({
