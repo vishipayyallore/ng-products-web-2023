@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProgressSpinnerComponent } from './progress-spinner.component';
+
 import { NgmaterialModule } from '~/app/ngmaterial/ngmaterial.module';
 
-const components = [
-  ProgressSpinnerComponent
+const components: any[] = [
 ];
 
 @NgModule({

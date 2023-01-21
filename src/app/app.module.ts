@@ -9,7 +9,7 @@ import { NgmaterialModule } from './ngmaterial/ngmaterial.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './core/errors/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProgressSpinnerModule } from './core/components/progress-spinner/progress-spinner.module';
+import { ProgressSpinnerModule } from './core/components/core-components.module';
 
 @NgModule({
   declarations: [
