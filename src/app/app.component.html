@@ -7,3 +7,5 @@
 </div>
 
 <app-footer></app-footer>
+
+<app-spinner-overlay *ngIf="appService.spinner$ | async"></app-spinner-overlay>

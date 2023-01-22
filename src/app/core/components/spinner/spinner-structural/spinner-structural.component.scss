@@ -1,0 +1,16 @@
+.spinner-structural.component {
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+
+    >.wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shelf {
+        transform: scale(50%);
+    }
+}

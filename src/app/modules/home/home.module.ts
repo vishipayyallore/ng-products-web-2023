@@ -4,10 +4,10 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsModule } from '../products/products.module';
 import { HomeRoutingModule } from './home-routing.module';
-import { ProgressSpinnerModule } from '~/app/core/components/progress-spinner/progress-spinner.module';
+import { CoreComponentsModule } from '~/app/core/components/core-components.module';
 
 const components = [
-  HomeComponent
+  HomeComponent,
 ];
 
 @NgModule({
@@ -18,7 +18,7 @@ const components = [
     HomeRoutingModule,
     SharedModule,
     ProductsModule,
-    ProgressSpinnerModule
+    CoreComponentsModule
   ]
 })
 export class HomeModule { }

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
-import { map } from 'rxjs';
+import { delay, map } from 'rxjs';
 import { ProductsService } from '../products/products.service';
 import { MessageBandService } from '../shared/layout/message-band/message-band.service';
 
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   );
 
   productSlides$ = this.productsService.productSlides$.pipe(
+    delay(1000),
     map(productSlides => productSlides.slice(0, 5))
   );
 

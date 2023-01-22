@@ -1,0 +1,23 @@
+@mixin fixed-full {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.spinner.component {
+    >.overlay {
+        @include fixed-full();
+        background-color: rgb(5, 5, 114);
+        opacity: 20%;
+    }
+
+    >.wrapper {
+        @include fixed-full();
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
