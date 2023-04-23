@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
+```powershell
+cd C:\LordKrishna\SSP\Services-PlayIdentity
+
+docker build --pull --rm -f "./Dockerfile" -t products-web:$(Get-Date -Format yyyyMMddHHmmssfff) -t products-web:latest .
+
+docker run --name products-web --rm -d -p 8888:80 products-web:latest
+```
+
 ## Screenshots
 
 ![PreBuilt Themes](./Documentation/Images/PreBuilt-Themes.PNG)
